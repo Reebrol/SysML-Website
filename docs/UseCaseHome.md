@@ -8,7 +8,7 @@ This section will show concrete examples of what to do as well as what not to do
 
 # The Guidelines
 ## Use Case
-![Use Case Diagram Example](images/banking app.png){ width=90% }
+![Use Case Diagram Example](images/bankingapp.png){ width=90% }
 
 
 ### Naming Use Cases

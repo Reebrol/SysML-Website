@@ -18,4 +18,5 @@ nav:
       - Use Case Diagrams: UseCaseHome.md
       - Sequence Diagrams: SequenceHome.md
   
-
+markdown_extensions:
+  - attr_list
