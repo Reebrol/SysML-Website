@@ -8,7 +8,7 @@ This section will show concrete examples of what to do as well as what not to do
 
 # The Guidelines
 ## Use Case
-![Use Case Diagram Example](images/bankingapp.png){ width=90% }
+![Use Case Diagram Example](images/usecase1.png){ width=90% }
 
 
 ### Naming Use Cases
@@ -29,6 +29,8 @@ Actors should be placed on the outside edges of the diagram while the use cases 
 
 ### Non Human Actors
 An actor is not necessarily a human. It could be an electronic component, or even an entire organization depending on the level of the diagram. Most Actors are drawn as stick figures but actions that are connected with a clear temporal signal such as a calendar event or a system clock are drawn with a stick-figure representation of an hour-glass.
+
+
 
 ## Relationship
 
