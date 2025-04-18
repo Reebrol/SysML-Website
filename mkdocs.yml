@@ -1,0 +1,22 @@
+site_name: SysML Guide
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - search.suggest
+    - toc.integrate
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - navigation.top
+
+nav:
+  - Home: SysMLguideHome.md
+  - SysML Guidelines:
+      - Use Case Diagrams: UseCaseHome.md
+      - Sequence Diagrams: SequenceHome.md
+  
+markdown_extensions:
+  - attr_list
