@@ -1,0 +1,516 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/UseCaseHome/">
+      
+      
+        <link rel="prev" href="../SysMLguideHome/">
+      
+      
+        <link rel="next" href="../SequenceHome/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Use Case Diagrams - SysML Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SysML Guide" class="md-header__button md-logo" aria-label="SysML Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SysML Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Use Case Diagrams
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../SysMLguideHome/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  SysML Guidelines
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SysML Guide" class="md-nav__button md-logo" aria-label="SysML Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SysML Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SysMLguideHome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    SysML Guidelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            SysML Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Case Diagrams
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SequenceHome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sequence Diagrams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduction">Introduction</h1>
+<p>It is said that a picture is worth a 1000 words. It might be worth an order of magnitude more in lines of code since use cases represent system behaviors that occur at the interface of the human user and the computer system. Thus use cases describe the "what" in contrast to other diagrams which will describe the "how." Thus the case diagram is a visual description of the overarching capabilities of a system and subsystem and an essential jumping off point for further refinement of the design.</p>
+<p>These guidelines are meant to comprise best practices for creating unambiguous Use Case diagrams that convey an accurate and comprehensive view of user interactions that can then be decomposed further and expanded into detailed designs for system implementation.</p>
+<p>This section will show concrete examples of what to do as well as what not to do accompanied with the justifications for the approach.</p>
+<h1 id="the-guidelines">The Guidelines</h1>
+<h2 id="use-case">Use Case</h2>
+<p><img alt="Use Case Diagram Example" src="../images/usecase1.png" width="90%" /></p>
+<h3 id="naming-use-cases">Naming Use Cases</h3>
+<p>Use case names should be straightforward in describing exactly what function is required from the system. As such, use case names should be verbs or verb phrases. When using verb phrases be sure to use active voice instead of passive voice. For example "Compress Data" instead of "Perform Data Compression."</p>
+<p><img alt="Use Case Diagram Example" src="../images/usecase.png" width="60%" /></p>
+<p>In Use Case Diagrams, use cases are written within oval shapes.</p>
+<h3 id="stacked-design-for-use-cases">Stacked Design for Use Cases</h3>
+<p>Use case diagrams are not intended to show the time course of system operations or specify temporal dependencies between tasks. However, if the use cases on a particular diagram do have  a logical sequence they should be displayed as an aligned stack, in the correct order, to increase readability.</p>
+<h2 id="actor">Actor</h2>
+<h3 id="naming-actors">Naming Actors</h3>
+<p>Actor names, should be unambiguous nouns.  It is OK, and actually preferable to use domain-specific terms to describe the actor as specifically as possible. Domain-relevant roles that directly map to actions described in use cases are preferred vs. general terms such as job titles. </p>
+<h3 id="actor-placement">Actor Placement</h3>
+<p>Actors should be placed on the outside edges of the diagram while the use cases should be placed more centrally.  Actors should not be places unless they are associated with at least one use case on the diagram. </p>
+<h3 id="non-human-actors">Non Human Actors</h3>
+<p>An actor is not necessarily a human. It could be an electronic component, or even an entire organization depending on the level of the diagram. Most Actors are drawn as stick figures but actions that are connected with a clear temporal signal such as a calendar event or a system clock are drawn with a stick-figure representation of an hour-glass.</p>
+<h2 id="relationship">Relationship</h2>
+<h3 id="types-of-relationships">Types of Relationships</h3>
+<p>Use Cases diagrams may express several types of relationships. Relationships can be between two use cases two actors or between an actor and a use case. Use cases come in two basic types Associations, and Generalizations.</p>
+<h4 id="associations">Associations</h4>
+<p>Associations between actors and use cases are undirected and are indicated by a single line between the actor and the use case without arrow heads. Associations between use case display the directionality of the relationship and are indicated by a single line with a terminal arrowhead. The arrowhead is open in style and direction of the arrow indicates that one use case invokes another and the arrow head points at the use case that is being invoked by the other.</p>
+<h4 id="generalizations">Generalizations</h4>
+<p>Generalizations indicate that one type of actor or use case can be considered a subtype of another. The generalization is indicated by a single line with a terminal arrowhead. The arrowhead is closed (triangular) in style and the direction of the arrowhead points at the more general of the two types (e.g. the parent class).</p>
+<h3 id="extensions-vs-inclusions">Extensions vs. Inclusions</h3>
+<p>Relationship arrows may be labeled to indicate one of two categories - extensions and inclusions. Extensions and inclusions are mean to indicate high level relationships and not design decisions. Thus avoid more than two levels of these relationships as that level of design is beyond the scope of a Use Case diagram.</p>
+<h4 id="extensions">Extensions</h4>
+<p>Extensions are a type of generalization in which additional steps are performed beyond what is defined in the base case. An extension occurs after the invocation of the base case but may proceed in parallel with the actions of the base case. The extension relationship is indicated by the label <code>&lt;&lt;extend&gt;&gt;</code></p>
+<h4 id="inclusions">Inclusions</h4>
+<p>Inclusions are a type of relationship in which one use case specifically invokes another in the course of performing its actions. An inclusion can be thought of similarly to a function call where one use case implies the usage of the other's functionality. The inclusion relationship is indicated by the label <code>&lt;&lt;include&gt;&gt;</code></p>
+<h3 id="layout-geometry">Layout &amp; Geometry</h3>
+<p>The Use Case diagram is not an indicator of temporal sequencing. However if there is a natural ordering to the indicated activities, they should be placed top to bottom, left-to-right. The more important actors or prior use cases should appear above the others. An extending use case should be placed below the parent use case. The invoking use case should be placed to the left of the invoked use case. </p>
+<p>In addition to the best practices discussed here, certain publication requirements may need to be accommodated depending on the medium of publication or organizational standards. Additional additional formatting can be made compliant as follows.</p>
+<h4 id="headers-and-footers">Headers and Footers</h4>
+<p>The diagram should be able to accommodate headers and footers.  The text of the headers and footers should be centered. The color and size of the footer should be configurable to comply with external publication requirements.</p>
+<h4 id="left-right-margins">Left &amp; Right Margins</h4>
+<p>The left margin should be reserved for additional explanatory notes &amp; references about each particular diagram.</p>
+<p>The right margin should be reserved for a "Legend" or "Key" that explains the semantics of any custom fonts, font weights, or colors used in each particular diagram. </p>
+<h3 id="other-considerations">Other Considerations</h3>
+<p>Do not model more detail than necessary and use high level concepts in a Use Case model. Natural Language descriptions and common-sense notions are preferred. Jargon and technical language is OK only if the target audience is expected to be familiar with all the terminology used.</p>
+<h2 id="system-boundary">System Boundary</h2>
+<p>Use cases use rectangles to indicate various system boundaries. That is, use cases that are collected to implement the functionality of a named system.</p>
+<h3 id="when-to-not-use-boundaries">When to (Not) Use Boundaries</h3>
+<p>System boundaries are optional and should only be used in cases where there are multiple systems or subsystems that need to be distinguished. If the use cases all belong to the same logical process, omit the system boundary as it will produced unnecessary clutter. </p>
+<h3 id="naming-considerations">Naming Considerations</h3>
+<p>As with actors, the named system boundary should be a strong verb that indicates either the physical or logical system to which the member use cases belong.</p>
+<h3 id="lumping-splitting">Lumping &amp; Splitting</h3>
+<p>Use a boundary box only if it would increase the clarity of the diagram and set apart meaningful distinctions between the use cases as collections. Remember that a Use Case diagram is not a detailed design. Thus what is considered a "System" is at the conceptual level and only indicates groupings between the use cases as it pertains to the services that the system provides to each type of user.  Avoid making distinctions with no functional visibility to the user and collect related actions based on their overall effects to the resulting outputs.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Just because the Use Case diagram describes high-level concepts it does not absolve them from being constructed in a rigorous fashion. On the contrary, design at this level must be managed with increased caution since misunderstandings conveyed from these diagrams to further elaborations of detailed design will be multiplied resulting in errors that will be both insidious and expensive to fix.</p>
+<h1 id="references">References</h1>
+<p>[1] The Elements of UML Style
+[2] How consistency is handled in model‑driven software engineering and UML: an expert opinion survey Software Quality Journal (2023) 31:1–54 https://doi.org/10.1007/s11219-022-09585-2
+[3] OMG Systems Modeling Language (OMG SysML™) Tutorial (September, 2009)
+[4] SYSML V2: Where We Are and How We Got Here (OMG Meeting Orlando, FL June 21, 2023)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
